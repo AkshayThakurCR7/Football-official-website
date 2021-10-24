@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Official Sparkles FC</title>
+
+</head>
+
+<body>
+      <!-- Signup Modal -->
+      <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Get an SFC account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Name</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                          </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Confirmed Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                          </div>
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login to SFC</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand active" href="#"><b>SFC</b></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="player.html">Players</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle shop" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Shop
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Jersey</a></li>
+                            <li><a class="dropdown-item" href="#">Football</a></li>
+                            <li><a class="dropdown-item" href="#">Studs</a></li>
+                            <li><a class="dropdown-item" href="#">Shin gaurds</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex">3
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+   
+
+    <!-- Squad -->
+    <div class="container">
+        <h1 style="color: black; font-weight: 800; text-align: center;">
+            SFC SQUAD
+        </h1>
+        <div class="album py-5 bg-light">
+            <div class="container">
+                 
+            
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p1.png" class="bd-placeholder-img card-img-top" width="100%" height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Player Name:</b> Siddhesh</p>
+                                <p class="card-text"><b>Position:</b> Forward</p>
+                                <p class="card-text"><b>Number:</b> 7</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p2.png" class="bd-placeholder-img card-img-top" width="100%" height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Player Name:</b> Sumit</p>
+                                <p class="card-text"><b>Position:</b> Forward</p>
+                                <p class="card-text"><b>Number:</b> 23</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p3.png" class="bd-placeholder-img card-img-top" width="100%" height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Player Name:</b> Amol</p>
+                                <p class="card-text"><b>Position:</b> Forward</p>
+                                <p class="card-text"><b>Number:</b> 10</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p4.png" class="bd-placeholder-img card-img-top" width="100%" height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Player Name:</b> Mayuresh</p>
+                                <p class="card-text"><b>Position:</b> Forward</p>
+                                <p class="card-text"><b>Number:</b> 9</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p16.png" class="bd-placeholder-img card-img-top" width="100%" height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Player Name:</b> Swapanil</p>
+                                <p class="card-text"><b>Position:</b> Forward</p>
+                                <p class="card-text"><b>Number:</b> 13</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p5.png" class="bd-placeholder-img card-img-top" width="100%" height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Player Name:</b> Ajinkya</p>
+                                <p class="card-text"><b>Position:</b> Forward</p>
+                                <p class="card-text"><b>Number:</b> 11</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p6.png" class="bd-placeholder-img card-img-top" width="100%" height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Player Name:</b> Mandar</p>
+                                <p class="card-text"><b>Position:</b> Midfielder</p>
+                                <p class="card-text"><b>Number:</b> 12</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p7.png" class="bd-placeholder-img card-img-top" width="100%" height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Player Name:</b> Vaibhav</p>
+                                <p class="card-text"><b>Position:</b> Midfilder</p>
+                                <p class="card-text"><b>Number:</b> 45</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p8.png" class="bd-placeholder-img card-img-top" width="100%" height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Player Name:</b> Dhaval</p>
+                                <p class="card-text"><b>Position:</b> Midfilder</p>
+                                <p class="card-text"><b>Number:</b> 17</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p10.png" class="bd-placeholder-img card-img-top" width="100%" height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Player Name:</b> Sufi</p>
+                                <p class="card-text"><b>Position:</b> Midfilder</p>
+                                <p class="card-text"><b>Number:</b> 14</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p12.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Player Name:</b> Akshay</p>
+                                <p class="card-text"><b>Position:</b> Defender</p>
+                                <p class="card-text"><b>Number:</b> 5</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p11.png" class="bd-placeholder-img card-img-top" width="100%" height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Player Name:</b> Swapanil</p>
+                                <p class="card-text"><b>Position:</b> Defender</p>
+                                <p class="card-text"><b>Number:</b> 8</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p9.jpeg" class="bd-placeholder-img card-img-top" width="100%" height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Player Name:</b> Lancy</p>
+                                <p class="card-text"><b>Position:</b> Defender</p>
+                                <p class="card-text"><b>Number:</b> 4</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p13.png" class="bd-placeholder-img card-img-top" width="100%" height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Player Name:</b> Pranav</p>
+                                <p class="card-text"><b>Position:</b> Defender</p>
+                                <p class="card-text"><b>Number:</b> 6</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p15.png" class="bd-placeholder-img card-img-top" width="100%"        alt="Loading...." height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Player Name:</b> Idris</p>
+                                <p class="card-text"><b>Position:</b> Midfielder</p>
+                                <p class="card-text"><b>Number:</b> 16</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p14.png" class="bd-placeholder-img card-img-top" width="100%" height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Player Name:</b> Saurabh</p>
+                                <p class="card-text"><b>Position:</b> Goalkeeper</p>
+                                <p class="card-text"><b>Number:</b> 1</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p15.png" class="bd-placeholder-img card-img-top" width="100%"        alt="Loading...." height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Player Name:</b> Aniket</p>
+                                <p class="card-text"><b>Position:</b> Goalkeeper</p>
+                                <p class="card-text"><b>Number:</b> 2</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm" style="background: rgb(14, 15, 61); color: white;">
+                            <img src="p17.png" class="bd-placeholder-img card-img-top" width="100%" height="225">
+
+                            <div class="card-body">
+                                <p class="card-text"><b>Manger Name:</b> Monu</p>
+                                <p class="card-text"><b>Experiance:</b> 10 years</p>
+                                <p class="card-text"><b>Number:</b> 18</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2017–2021 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
